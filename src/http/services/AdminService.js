@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const BASE_URL = 'http://localhost:8000/api/admin'
+const BASE_URL = 'https://spbebackend-production.up.railway.app/api/admin'
 
 // Konfigurasi interceptor untuk menambahkan token
 axios.interceptors.request.use(

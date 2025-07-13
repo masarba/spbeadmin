@@ -143,7 +143,7 @@ const register = async () => {
   };
 
   try {
-    const response = await axios.post("http://localhost:8000/api/auth/register", payload);
+    const response = await axios.post("https://spbebackend-production.up.railway.app/api/auth/register", payload);
 
     if (response.data) {
       successMessage.value = "Registration successful!";
