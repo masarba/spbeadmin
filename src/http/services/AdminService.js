@@ -195,7 +195,7 @@ const AdminService = {
   // Two-Factor Authentication
   async setup2FA() {
     try {
-      const response = await axios.post(`http://127.0.0.1:8000/api/auth/setup-2fa`, {})
+      const response = await axios.post(`https://spbebackend-production.up.railway.app/api/auth/setup-2fa`, {})
       return response.data
     } catch (error) {
       console.error('Setup 2FA error:', error.response?.data)
@@ -205,7 +205,7 @@ const AdminService = {
 
   async activate2FA(data) {
     try {
-      const response = await axios.post(`http://127.0.0.1:8000/api/auth/verify-2fa`, {
+      const response = await axios.post(`https://spbebackend-production.up.railway.app/api/auth/verify-2fa`, {
         otp: data.otp,
         google2fa_secret: data.google2fa_secret || data.secret,
         email: data.email
@@ -219,7 +219,7 @@ const AdminService = {
 
   async verify2FA(data) {
     try {
-      const response = await axios.post(`http://127.0.0.1:8000/api/auth/verify-2fa`, data)
+      const response = await axios.post(`https://spbebackend-production.up.railway.app/api/auth/verify-2fa`, data)
       return response.data
     } catch (error) {
       console.error('Verify 2FA error:', error.response?.data)

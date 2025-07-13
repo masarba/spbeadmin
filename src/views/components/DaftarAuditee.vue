@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     getAuditees() {
-      axios.get('http://127.0.0.1:8000/api/auth/auditees')
+      axios.get('https://spbebackend-production.up.railway.app/api/auth/auditees')
         .then(response => {
           this.auditees = response.data;
         })

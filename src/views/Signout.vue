@@ -19,7 +19,7 @@ const signOut = async () => {
     isLoading.value = true;
     
     // Panggil endpoint logout
-    await axios.post("http://127.0.0.1:8000/api/auth/logout", {}, {
+    await axios.post("https://spbebackend-production.up.railway.app/api/auth/logout", {}, {
       headers: {
         Authorization: `Bearer ${store.state.token}`
       }
